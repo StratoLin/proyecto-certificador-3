@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  // public productos: Producto[]  = [];
+
+  // deleteId(id: number): void {
+  //   console.log('Delete id:', id);
+  //   this.productos.splice(id, 1);
+  // }
 }

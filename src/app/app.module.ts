@@ -11,6 +11,9 @@ import { LoginComponent } from './components/login/login.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CrudProductosComponent } from './components/crud-productos/crud-productos.component';
+import { HistorialProductoComponent } from './components/historial-producto/historial-producto.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,11 +26,14 @@ import { FooterComponent } from './components/footer/footer.component';
     LoginComponent,
     ProductosComponent,
     CarritoComponent,
-    FooterComponent
+    FooterComponent,
+    CrudProductosComponent,
+    HistorialProductoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
