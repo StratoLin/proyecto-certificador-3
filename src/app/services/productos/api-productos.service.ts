@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IProduct } from '../interfaces/producto.interface';
+import { IProduct } from '../../interfaces/producto.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -20,15 +20,15 @@ export class ApiProductosService {
     return this._htppClient.get<IProduct>(`${this.baseUrl}/${id}`);
   }
 
-  public nuevoProducto(producto: IProduct): Observable<IProduct>{
+  nuevoProducto(producto: IProduct): Observable<IProduct>{
     return this._htppClient.post<IProduct>(`${this.baseUrl}`, producto);
   }
 
-  public eliminarProducto(id: number): Observable<IProduct>{
+  eliminarProducto(id: number): Observable<IProduct>{
     return this._htppClient.delete<IProduct>(`${this.baseUrl}/${id}`);
   }
 
-  public actualizarProducto(id: number, producto: IProduct): Observable<IProduct>{
+  actualizarProducto(id: number, producto: IProduct): Observable<IProduct>{
     return this._htppClient.put<IProduct>(`${this.baseUrl}/${id}`, producto);
   }
 }

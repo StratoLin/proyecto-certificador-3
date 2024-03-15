@@ -17,13 +17,14 @@
         <!-- Navigation-->
         
         <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
+        <header class="bg-dark d-flex banner">
+            <img class="banner" src="./../../../assets/only.jpg" alt="banner-onlyclothes">
+            
+                <div class="text-center text-white banner-text">
                     <h1 class="display-4 fw-bolder">OnlyClothes</h1>
                     <p class="lead fw-normal text-white-50 mb-0">Tienda Virtual</p>
                 </div>
-            </div>
+            
         </header>
         <!-- Section-->
         <section class="py-5">
@@ -49,7 +50,7 @@
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent d-flex justify-content-between">
                                 <div class="text-center "><a class="btn btn-outline-dark mt-auto" [routerLink]="['/producto', item.id]">Ver Detalle</a></div>
-                                <div class="text-center "><a class="btn btn-outline-dark mt-auto" href="#"><i class="bi bi-cart-plus"></i></a></div>
+                                <div class="text-center "><button class="btn btn-outline-dark mt-auto" type="submit" ><i class="bi bi-cart-plus"></i></button></div>
                             </div>
                         </div>
                     </div>

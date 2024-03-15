@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { CrudProductosComponent } from './components/crud-productos/crud-productos.component';
 import { HistorialProductoComponent } from './components/historial-producto/historial-producto.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 const routes: Routes = [
   {path: 'registro', component: RegistroComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'producto/:id', component: ProductosComponent},
   {path: 'agregar', component: CrudProductosComponent},
   {path: 'historial-compra', component: HistorialProductoComponent},
+  {path: 'carrito', component: CarritoComponent},
   {path: '', redirectTo: '/inicio', pathMatch: 'full'}
 ];
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IProduct } from 'src/app/interfaces/producto.interface';
-import { ApiProductosService } from 'src/app/services/api-productos.service';
+import { ApiProductosService } from 'src/app/services/productos/api-productos.service';
 
 @Component({
   selector: 'app-productos',

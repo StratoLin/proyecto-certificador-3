@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from 'src/app/interfaces/producto.interface';
-import { ApiProductosService } from '../../services/api-productos.service';
+import { ApiProductosService } from '../../services/productos/api-productos.service';
+import { CarritoServiceService } from 'src/app/services/carrito/carrito-service.service';
 
 @Component({
   selector: 'app-pages-main',
@@ -10,6 +11,8 @@ import { ApiProductosService } from '../../services/api-productos.service';
 export class PagesMainComponent implements OnInit{
 
   productList: IProduct[] = [];
+  carrito: number = 0;
+  
 
   constructor(private _apiService: ApiProductosService) { }
 
@@ -18,5 +21,7 @@ export class PagesMainComponent implements OnInit{
       this.productList = data;
     });
   }
+
+  
 
 }
