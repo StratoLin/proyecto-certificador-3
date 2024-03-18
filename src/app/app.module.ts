@@ -14,6 +14,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CrudProductosComponent } from './components/crud-productos/crud-productos.component';
 import { HistorialProductoComponent } from './components/historial-producto/historial-producto.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

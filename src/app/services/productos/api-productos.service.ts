@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IProduct } from '../../interfaces/producto.interface';
@@ -8,12 +8,13 @@ import { IProduct } from '../../interfaces/producto.interface';
 })
 export class ApiProductosService {
 
-  private baseUrl = 'https://fakestoreapi.com/products';
+  private baseUrl = 'http://localhost:8080/semana08/productos';
 
   constructor(private _htppClient: HttpClient) { }
 
   getAllProductos(): Observable<IProduct[]>{
-    return this._htppClient.get<IProduct[]>(this.baseUrl);
+    
+    return this._htppClient.get<IProduct[]>(`${this.baseUrl}`);
   }
 
   getProductoById(id: number): Observable<IProduct>{
@@ -21,7 +22,7 @@ export class ApiProductosService {
   }
 
   nuevoProducto(producto: IProduct): Observable<IProduct>{
-    return this._htppClient.post<IProduct>(`${this.baseUrl}`, producto);
+    return this._htppClient.post<IProduct>(`${this.baseUrl}`, {...producto});
   }
 
   eliminarProducto(id: number): Observable<IProduct>{

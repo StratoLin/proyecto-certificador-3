@@ -37,20 +37,20 @@
                     <div *ngFor="let item of productList" class="col mb-5 d-flex align-items-stretch">
                         <div  class="card d-flex flex-column" style="width: 18rem;">
                             <!-- Product image-->
-                            <img class="card-img-top" src={{item.image}} alt="..." />
+                            <img class="card-img-top" [src]="'data:image/jpeg;base64' + item.imagen" alt={{item.nombre}} />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">{{item.title}}</h5>
+                                    <h5 class="fw-bolder">{{item.nombre}}</h5>
                                     <!-- Product price-->
-                                    {{item.price | currency:' S/. '}}
+                                    {{item.precio | currency:' S/. '}}
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent d-flex justify-content-between">
                                 <div class="text-center "><a class="btn btn-outline-dark mt-auto" [routerLink]="['/producto', item.id]">Ver Detalle</a></div>
-                                <div class="text-center "><button class="btn btn-outline-dark mt-auto" type="submit" ><i class="bi bi-cart-plus"></i></button></div>
+                                <div class="text-center "><button onclick="agregarAlCarrito()" class="btn btn-outline-dark mt-auto" type="submit" ><i class="bi bi-cart-plus"></i></button></div>
                             </div>
                         </div>
                     </div>

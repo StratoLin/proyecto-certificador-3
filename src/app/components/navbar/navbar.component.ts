@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CarritoServiceService } from 'src/app/services/carrito/carrito-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +8,11 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
-  // public productos: Producto[]  = [];
+  carrito: number = 0;
 
-  // deleteId(id: number): void {
-  //   console.log('Delete id:', id);
-  //   this.productos.splice(id, 1);
-  // }
+  constructor(private carritoService: CarritoServiceService) { }
+
+  ngOnInit(): void {
+    this.carritoService.currentProducto.subscribe(producto => this.carrito = producto);
+  }
 }

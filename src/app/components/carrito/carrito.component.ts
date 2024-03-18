@@ -9,9 +9,7 @@ import { CarritoServiceService } from 'src/app/services/carrito/carrito-service.
 })
 export class CarritoComponent{
 
- 
   
-
 
 }
 

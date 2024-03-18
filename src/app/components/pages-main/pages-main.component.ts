@@ -11,7 +11,6 @@ import { CarritoServiceService } from 'src/app/services/carrito/carrito-service.
 export class PagesMainComponent implements OnInit{
 
   productList: IProduct[] = [];
-  carrito: number = 0;
   
 
   constructor(private _apiService: ApiProductosService) { }
@@ -22,6 +21,5 @@ export class PagesMainComponent implements OnInit{
     });
   }
 
-  
 
 }
